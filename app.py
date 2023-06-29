@@ -2,7 +2,7 @@ from flask import Flask, request
 import os
 from send_sms import SMSClient
 from initiate_call import VOICE
-
+from med_ai import med_ai
 
 app = Flask(__name__)
 
@@ -43,7 +43,7 @@ def ussd_callback():
         response += "4. Mater Hospital"
 
     elif text == "3":
-        call_to = "+2547********"
+        call_to = "+254742079321"
         make_call = VOICE(call_to)
         make_call.call()
 
@@ -54,7 +54,7 @@ def ussd_callback():
 
     # sub sub menu
     elif text == "2*1":
-        call_to = "+2547********"
+        call_to = "+254742079321"
         make_call = VOICE(call_to)
         make_call.call()
 
@@ -84,7 +84,7 @@ def ussd_callback():
     else:
         try:
             # sending the sms
-            message = text
+            message = med_ai(text)
             sms_client = SMSClient(phone_number, message)
             sms_client.send_sms()
             
