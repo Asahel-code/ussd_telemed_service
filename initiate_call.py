@@ -25,6 +25,6 @@ class VOICE:
         except Exception as e:
             print ("Encountered an error while making the call:%s" %str(e))
 
-# call_to = "+254742079321"
-# make_call = VOICE(call_to)
-# make_call.call()
+call_to = "+254742079321"
+make_call = VOICE(call_to)
+make_call.call()
