@@ -74,11 +74,12 @@ def ussd_callback():
         make_call.call()
 
         response = "END Call has been initiated. Please be patient as we connect you to Mater Hospital."
-        
+
     else:
         try:
             # sending the sms
-            message = med_ai(text)
+            symptom = med_ai(text)
+            message =f"Hello, doctor. I've been experiencing {symptom} lately. What could be the possible causes?"
             sms_client = SMSClient(phone_number, message)
             sms_client.send_sms()
             

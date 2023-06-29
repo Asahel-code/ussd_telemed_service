@@ -18,5 +18,3 @@ def med_ai(message):
 
     return chatbot_response
 
-# message=med_ai('hi how are you')
-# print(message)
