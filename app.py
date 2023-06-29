@@ -16,11 +16,6 @@ def ussd_callback():
     service_code = request.values.get("serviceCode", None)
     phone_number = request.values.get("phoneNumber", None)
     text = request.values.get("text", "default")
-<<<<<<< HEAD:main.py
-=======
-    sms_phone_number = ["+254742079321"]
-    sms_phone_number.append(phone_number)
->>>>>>> e5967983369b587ce2d5b1e3f2bcbe6989d1b723:app.py
 
     call_back_client(phone_number)
 
@@ -47,11 +42,7 @@ def ussd_callback():
         response += "4. Mater Hospital"
 
     elif text == "3":
-<<<<<<< HEAD:main.py
         call_to = "+2547********"
-=======
-        call_to = "+254742079321"
->>>>>>> e5967983369b587ce2d5b1e3f2bcbe6989d1b723:app.py
         make_call = VOICE(call_to)
         make_call.call()
 
@@ -62,11 +53,7 @@ def ussd_callback():
 
     # sub sub menu
     elif text == "2*1":
-<<<<<<< HEAD:main.py
         call_to = "+2547********"
-=======
-        call_to = "+254742079321"
->>>>>>> e5967983369b587ce2d5b1e3f2bcbe6989d1b723:app.py
         make_call = VOICE(call_to)
         make_call.call()
 
