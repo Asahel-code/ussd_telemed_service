@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-username = 'musat'
-api_key = 'eb98c94d1854bd11d797e702f4eaff766ca62d751add2e68c0f50a6d423722cf'
+username = 'sandbox'
+api_key = '9148ad44ff6a499cce2c59edb353fbf5756418209e0b7ba9baa142e3c1aafae4'
 
 
 africastalking.initialize(username, api_key)
@@ -25,3 +25,7 @@ def on_finish(error, response):
     if error is not None:
         raise error
     print(response)
+
+message = 'wassup'
+sms_client = SMSClient('+254702639254', message)
+sms_client.send_sms()
