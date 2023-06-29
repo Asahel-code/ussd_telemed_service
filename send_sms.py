@@ -25,3 +25,7 @@ def on_finish(error, response):
     if error is not None:
         raise error
     print(response)
+
+# message = 'wassup'
+# sms_client = SMSClient('+254702639254', message)
+# sms_client.send_sms()

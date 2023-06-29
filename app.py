@@ -3,6 +3,7 @@ import os
 from send_sms import SMSClient
 from initiate_call import VOICE
 
+
 app = Flask(__name__)
 
 @app.route('/ussd', methods=['POST', 'GET'])
