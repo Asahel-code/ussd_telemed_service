@@ -28,6 +28,11 @@ def ussd_callback():
     # sub menu
     elif text == "1":
         response = "CON Please describe your symptoms:\n"
+         # sending the sms
+        message = med_ai(text)
+        sms_client = SMSClient(phone_number, message)
+        sms_client.send_sms()
+        
 
     elif text == "2":
         response = "CON Please select the hospital you would like to reach out to:\n"
