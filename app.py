@@ -79,7 +79,7 @@ def ussd_callback():
         try:
             # sending the sms
             # symptom = med_ai(text)
-            message ='we are experiencing problems please try again later'
+            message ='ChatGPT is at capacity right now. Please try again later.'
             sms_client = SMSClient(phone_number, message)
             sms_client.send_sms()
             
