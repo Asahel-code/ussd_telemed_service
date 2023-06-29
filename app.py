@@ -6,21 +6,15 @@ from med_ai import med_ai
 
 app = Flask(__name__)
 
-phone_number = ""
-
 @app.route('/ussd', methods=['POST', 'GET'])
 
 def ussd_callback():
-    global phone_number
-
     session_id = request.values.get("sessionId", None)
     service_code = request.values.get("serviceCode", None)
     phone_number = request.values.get("phoneNumber", None)
     text = request.values.get("text", "default")
 
-    call_back_client(phone_number)
-
-    response = ""  # Initialize response variable
+    response = ""
 
     # ussd logic
     if text == "":
@@ -96,8 +90,8 @@ def ussd_callback():
     return response
 
 @app.route('/call', methods=['POST'])
-def call_back_client(phone_number):
-    return f'<Response> <Dial phoneNumbers="{phone_number}" maxDuration="5"/></Response>'
+def call_back_client():
+    return '<Response> <Dial phoneNumbers="" maxDuration="5"/></Response>'
 
 
 if __name__ == "__main__":

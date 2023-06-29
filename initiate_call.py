@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-username = 'sandbox'
-api_key = '9148ad44ff6a499cce2c59edb353fbf5756418209e0b7ba9baa142e3c1aafae4'
-at_number = '+254730731050'
+username = os.environ.get('AT_USERNAME')  
+api_key = os.environ.get('AT_APIKEY')
+at_number = os.environ.get('AT_NUMBER')
 
 africastalking.initialize(username, api_key)
 
@@ -24,7 +24,3 @@ class VOICE:
             print (result)
         except Exception as e:
             print ("Encountered an error while making the call:%s" %str(e))
-
-# call_to = "+254742079321"
-# make_call = VOICE(call_to)
-# make_call.call()

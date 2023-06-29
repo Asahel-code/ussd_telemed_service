@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-username = 'sandbox'
-api_key = '9148ad44ff6a499cce2c59edb353fbf5756418209e0b7ba9baa142e3c1aafae4'
+username = os.environ.get('AT_USERNAME')  
+api_key = os.environ.get('AT_APIKEY')
 
 
 africastalking.initialize(username, api_key)
