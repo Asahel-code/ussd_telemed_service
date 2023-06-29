@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 def med_ai(message):
     prompt = "User: " + message + "\nChatGPT:"

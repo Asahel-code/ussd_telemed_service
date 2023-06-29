@@ -2,7 +2,7 @@ from flask import Flask, request
 import os
 from send_sms import SMSClient
 from initiate_call import VOICE
-# from med_ai import med_ai
+from med_ai import med_ai
 
 app = Flask(__name__)
 
@@ -78,8 +78,8 @@ def ussd_callback():
     else:
         try:
             # sending the sms
-            # symptom = med_ai(text)
-            message ='ChatGPT is at capacity right now. Please try again later.'
+            symptom = med_ai(text)
+            message =f"Hello, doctor. I've been experiencing {symptom} lately. What could be the possible causes?"
             sms_client = SMSClient(phone_number, message)
             sms_client.send_sms()
             
