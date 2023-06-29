@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 def med_ai(message):
     prompt = "User: " + message + "\nChatGPT:"
@@ -17,3 +17,6 @@ def med_ai(message):
     chatbot_response = response.choices[0].text.strip().split('\n')[0].replace("ChatGPT:", "")
 
     return chatbot_response
+
+# mess =med_ai('headache')
+# print(mess)
