@@ -74,7 +74,7 @@ def ussd_callback():
         make_call.call()
 
         response = "END Call has been initiated. Please be patient as we connect you to Mater Hospital."
-
+        
     else:
         try:
             # sending the sms
