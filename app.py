@@ -13,7 +13,7 @@ def ussd_callback():
     service_code = request.values.get("serviceCode", None)
     phone_number = request.values.get("phoneNumber", None)
     text = request.values.get("text", "default")
-    sms_phone_number = ["+2547*********"]
+    sms_phone_number = ["+254742079321"]
     sms_phone_number.append(phone_number)
 
     call_back_client(phone_number)
@@ -50,7 +50,7 @@ def ussd_callback():
         response += "4. Mater Hospital"
     
     elif text == "3":
-        call_to = "+2547*********"
+        call_to = "+254742079321"
         make_call = VOICE(call_to)
         make_call.call()
 
@@ -61,28 +61,28 @@ def ussd_callback():
     
     #sub sub menu
     elif text == "2*1":
-        call_to = "+2547*********"
+        call_to = "+254742079321"
         make_call = VOICE(call_to)
         make_call.call()
 
         response = "Call has been initiated be patient as we connect you to Kenyatta Hospital."
 
     elif text == "2*2":
-        call_to = "+2547*********"
+        call_to = "+254742079321"
         make_call = VOICE(call_to)
         make_call.call()
 
         response = "Call has been initiated be patient as we connect you to Mama lucy Hospital."
 
     elif text == "2*3":
-        call_to = "+2547*********"
+        call_to = "+254742079321"
         make_call = VOICE(call_to)
         make_call.call()
 
         response = "Call has been initiated be patient as we connect you to Mbagathi Hospital."
 
     elif text == "2*4":
-        call_to = "+2547*********"
+        call_to = "+254742079321"
         make_call = VOICE(call_to)
         make_call.call()
 
