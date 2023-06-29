@@ -1,6 +1,7 @@
 import openai
 
-openai.api_key = "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"
+#openai.api_key = "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"
+openai.api_key = "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"
 
 def med_ai(message):
     prompt = "User: " + message + "\nChatGPT:"
@@ -17,4 +18,3 @@ def med_ai(message):
     chatbot_response = response.choices[0].text.strip().split('\n')[0].replace("ChatGPT:", "")
 
     return chatbot_response
-
