@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-username = 'musat' 
-api_key = 'd46fe22e676feddca9f9dffec26e9c0d380858ea8846eee19e505bd0091974a6'
-at_number = '+254730731050'
+username = os.environ.get('AT_USERNAME')   
+api_key = os.environ.get('AT_APIKEY')  
+at_number = os.environ.get('AT_NUMBER')  
 
 africastalking.initialize(username, api_key)
 

@@ -1,6 +1,8 @@
 import openai
+import os
+from dotenv import load_dotenv
 
-openai.api_key = "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"
+openai.api_key = os.environ.get('OPEN_API_KEY')  
 
 def med_ai(message):
     prompt = "User: " + message + "\nChatGPT:"
