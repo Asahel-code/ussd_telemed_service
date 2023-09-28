@@ -23,5 +23,5 @@ pip install -r requirements.txt
 
 Finally run your application
 ``` bash
-python main.py
+python app.py
 ```
